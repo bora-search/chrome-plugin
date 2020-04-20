@@ -1,0 +1,28 @@
+{
+  "manifest_version": 2,
+  "name": "Bora Search",
+  "version": "0.0.2",
+  "description": "Switch automatically between 5 (or less) search engines and enjoy a more responsible surf on the web.",
+  "icons": {
+    "32":  "img/bora.png",
+    "48":  "img/bora.png",
+    "128": "img/bora.png"
+  },
+  "background": {
+    "scripts": [ "js/engine.js", "js/background.js", "js/jquery-3.3.1.min.js"],
+    "persistent": false
+  },
+  "browser_action": {
+    "default_icon": "img/bora.png",
+    "default_title": "Bora",
+    "default_popup": "bora.html"
+  },
+  "content_scripts": [ {
+    "all_frames": true,
+    "js": [ "js/engine.js", "js/content_script.js" ],
+    "matches": ["*://*/*"],
+    "run_at": "document_start"
+  } ],
+  "omnibox": { "keyword" : "bora" },
+  "permissions": [ "storage", "tabs" ]
+}
