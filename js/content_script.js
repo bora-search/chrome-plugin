@@ -6,7 +6,7 @@ function getUrlParameter() {
 
         if (activated === true) {
             if (doRedirect === true) {
-                let searchEngineDistrib = data.search_engine_distrib_store
+                let searchEngineDistrib = data.search_engine_distrib_store;
                 let searchEngineDomains = {};
                 let totalWeight = 0;
 
