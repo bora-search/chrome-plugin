@@ -8,6 +8,7 @@ chrome.runtime.onInstalled.addListener(function (details) {
         });
 
         chrome.storage.sync.set({'do_redirect': true});
+        chrome.storage.sync.set({'activated': true});
     }
 });
 

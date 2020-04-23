@@ -1,6 +1,6 @@
 // Store percentage values when user makes changes
 document.addEventListener('DOMContentLoaded', function () {
-    
+
     Object.keys(SEARCH_ENGINE_URLS).forEach((engine) => {
         let input = document.getElementById(engine);
 
@@ -13,6 +13,15 @@ document.addEventListener('DOMContentLoaded', function () {
             input.value = data.search_engine_distrib_store[engine];
         });
 
+    });
+
+    chrome.storage.sync.get('activated', function (data) {
+        let activated = data.activated;
+        if(activated === true) {
+            document.getElementById("activated").checked = true;
+        } else {
+            document.getElementById("activated").checked = false;
+        }
     });
 
     document.getElementById('bora').addEventListener('click', function () {
@@ -35,6 +44,19 @@ document.addEventListener('DOMContentLoaded', function () {
             });
             window.close();
         }
+    });
+
+    document.getElementById('activated').addEventListener('click', function () {
+        $('#activated').change(function() {
+            if ($(this).prop('checked')) {
+                chrome.storage.sync.set({'activated': true});
+                document.getElementById("activated").checked = true;
+            }
+            else {
+                chrome.storage.sync.set({'activated': false});
+                document.getElementById("activated").checked = false;
+            }
+        });
     });
 
     document.getElementById('balance').addEventListener('click', function () {
