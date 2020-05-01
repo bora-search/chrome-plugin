@@ -1,3 +1,4 @@
+'use strict';
 chrome.runtime.onInstalled.addListener(function (details) {
     if (details.reason === "install") {
         let searchEngines = Object.keys(SEARCH_ENGINE_URLS);

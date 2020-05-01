@@ -51,10 +51,12 @@ document.addEventListener('DOMContentLoaded', function () {
             if ($(this).prop('checked')) {
                 chrome.storage.sync.set({'activated': true});
                 document.getElementById("activated").checked = true;
+                chrome.browserAction.setIcon({path: 'img/bora16.png'});
             }
             else {
                 chrome.storage.sync.set({'activated': false});
                 document.getElementById("activated").checked = false;
+                chrome.browserAction.setIcon({path: 'img/disabled16.png'});
             }
         });
     });
