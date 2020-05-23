@@ -9,7 +9,7 @@
     "128": "img/bora128.png"
   },
   "background": {
-    "scripts": [ "js/engine.js", "js/background.js", "js/jquery-3.3.1.min.js"],
+    "scripts": [ "js/engine.js", "js/background.js", "js/jquery-3.3.1.min.js", "js/popper.min.js", "js/bootstrap.min.js"],
     "persistent": false
   },
   "browser_action": {
