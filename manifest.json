@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "Bora Search",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Switch automatically between 5 (or less) search engines and enjoy a more responsible surf on the web.",
   "icons": {
     "16":  "img/bora16.png",

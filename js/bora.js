@@ -1,4 +1,3 @@
-// Store percentage values when user makes changes
 document.addEventListener('DOMContentLoaded', function () {
 
     Object.keys(SEARCH_ENGINE_URLS).forEach((engine) => {
@@ -24,6 +23,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
+    // Store percentage values when user makes changes
     document.getElementById('bora').addEventListener('click', function () {
 
         let enginesPercentageDistrib = {};
@@ -51,12 +51,12 @@ document.addEventListener('DOMContentLoaded', function () {
             if ($(this).prop('checked')) {
                 chrome.storage.sync.set({'activated': true});
                 document.getElementById("activated").checked = true;
-                chrome.browserAction.setIcon({path: 'img/bora16.png'});
+                chrome.browserAction.setIcon({path: 'img/bora128.png'});
             }
             else {
                 chrome.storage.sync.set({'activated': false});
                 document.getElementById("activated").checked = false;
-                chrome.browserAction.setIcon({path: 'img/disabled16.png'});
+                chrome.browserAction.setIcon({path: 'img/disabled128.png'});
             }
         });
     });
