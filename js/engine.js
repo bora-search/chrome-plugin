@@ -1,9 +1,9 @@
 const SEARCH_ENGINE_URLS = {
+    'bing': 'https://www.bing.com/search?q=',
     'duckduckgo': 'https://www.duckduckgo.com?q=',
     'ecosia': 'https://www.ecosia.org/search?q=',
-    'qwant': 'https://www.qwant.com/?q=',
-    'bing': 'https://www.bing.com/search?q=',
-    'google': 'https://www.google.com/search?q='
+    'google': 'https://www.google.com/search?q=',
+    'qwant': 'https://www.qwant.com/?q='
 };
 
 function computeBalancedDistribution(searchEngines) {
