@@ -12,7 +12,7 @@
     "scripts": [
       "js/engine.js",
       "js/background.js",
-      "js/jquery-3.3.1.min.js",
+      "js/jquery-3.7.1.min.js",
       "js/popper.min.js",
       "js/bootstrap.min.js"
     ],
